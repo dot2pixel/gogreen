@@ -1,0 +1,67 @@
+<!-- ******************************************************************** -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--script to load external pages-->
+		<script>
+			$(document).ready(function() {
+			  $('.link-load-content').click(function() {
+				 var url=$(this).attr('href');
+				$('#content-loader').html("");//replace for propper method
+				$('#content-loader').animate({
+						marginRight: '-110%'
+							},
+					500
+					
+					); // end animate
+					$('.close-loader').animate({
+						marginRight: '-110%'
+							},
+					500
+					
+					); // end animate
+				
+				 $('#content-loader').load(url + '#content-container' );
+				 $('#content-loader').animate({
+						marginRight: '0'
+							},
+					500
+					
+					); // end animate
+					$('.close-loader').animate({
+						marginRight: '0'
+							},
+					500
+					
+					); // end animate
+					$('#content-loader').stop();
+				 return false;
+			  }); //end click
+						
+			}); // end ready
+		</script>
+
+<style>
+#content-loader{
+width:100%;
+height:90%;
+position:fixed;
+top:5%;
+right:0;
+margin-right:-110%;
+z-index:1000;
+padding:2%;
+background:rgba(233,233,233,0.9);
+overflow:scroll;
+/*border:1px solid #95C11F;
+background:#E9E9DE;*/
+}
+</style>
+
+
+
+<option value="index.html#home-page">Home</option>
+            <option value="index.html#page2">Wildlife</option>
+            <option value="index.html#page3">Traveling</option>
+            <option value="index.html#page4">Saving Energy</option>
+            <option value="index.html#page5">Water Demands</option>
+            <option value="index.html#page6">Recycling</option>
+            <option value="index.html#page7">Children</option>
