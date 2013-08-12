@@ -6,10 +6,10 @@
         id = "euricopenelas.com.gogreen"
         version = "1.0.0">
 
-    <name>Hello World</name>
+    <name>Go Green</name>
 
     <description>
-        HApp builded for the module of Open Source Web Design. Portfolio material of Eurico Penelas under the ccreative commons.
+        App builded for the module of Open Source Web Design. Portfolio material of Eurico Penelas under the ccreative commons.
     </description>
 
     <author href="http://euricopenelas.com" email="eurico_penelas@ymail.com">
@@ -89,6 +89,7 @@ Define access to external domains.
 Otherwise, you can specify specific domains:
 -->
     <access origin="http://127.0.0.1*"/> <!-- allow local pages -->
+        <access origin="http://euricopenelas.com*"/> <!-- allow site pages -->
     <!--
 <access origin="http://phonegap.com" /> - allow any secure requests to http://honegap.com/
 <access origin="http://phonegap.com" subdomains="true" /> - same as above, but including subdomains, such as http://build.phonegap.com/
@@ -96,3 +97,12 @@ Otherwise, you can specify specific domains:
 -->
 
 </widget>
+
+
+
+
+    Keystore name: "debug.keystore"
+    Keystore password: "android"
+    Key alias: "androiddebugkey"
+    Key password: "android"
+    CN: "CN=Android Debug,O=Android,C=US"
